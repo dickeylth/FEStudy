@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>测试页面</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../tmp/css/demo.css"/>
+    <script src="http://a.tbcdn.cn/s/kissy/1.3.0/kissy.js" charset="utf-8"></script>
+    <!--<script>
+        KISSY.config({
+            packages:[
+                {
+                    name:"gallery",
+                    tag:"20111220",
+                    path:"../../../",  // cdn上适当修改对应路径
+                    charset:"utf-8"
+                }
+            ]
+        });
+    </script>-->
+</head>
+<body>
+	<div>
+       <h3>日历</h3>
+       <div id="container"></div>
+    </div>
+	<div>
+       <h3>代码</h3>
+		<div id="source"></div>
+    </div>
+    <script id="code">
+        KISSY.use('gallery/calendar/1.0/', function(S, Calendar) {
+			/**
+			 * 静态日历演示
+			 *
+			 * 基本参数配置使用实例
+			 */
+			var calendar = new Calendar({
+				'container': '#container'
+			});
+        });
+    </script>
+	<script src="printcode.js"></script>
+</body>
+</html>

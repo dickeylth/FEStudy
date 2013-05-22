@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>测试页面</title>
+	<meta charset="UTF-8"/>
+    <script src="http://a.tbcdn.cn/s/kissy/1.3.0/kissy.js" charset="utf-8"></script>
+    <script>
+        KISSY.config({
+            packages:[{
+                    name:"gallery",
+                    tag:"20111220",
+                    path:"../../../",  // cdn上适当修改对应路径
+                    charset:"utf-8"
+                }
+            ]
+        });
+    </script>
+    <link rel="stylesheet" href="../tmp/css/demo.css"/>
+</head>
+<body>
+    <div>
+        <h3>标签云</h3>
+        <div id="container"></div>
+    </div>
+    <div>
+	    <h4>代码</h4>
+	    <div id="source"></div>
+    </div>
+    <script id="code">
+        KISSY.use('gallery/tag-cloud/1.0/', function(S, TagCloud) {
+            new TagCloud('#container', [
+                {t: 'Javascript', r: 0.2, u: 'http://www.javascript.com'},
+                {t: 'HTML', r: 0.18},
+                {t: 'CSS', r: 0.32, u: 'http://www.css.net'},
+                {t: 'HTML5', r: 0.24, u: 'http://www.html5.com.cn'},
+                {t: 'Dreamweaver', r: 0.16},
+                {t: 'PHP', r: 0.17, u: 'http://www.php.net'},
+                {t: 'Velocity', r: 0.08},
+                {t: 'Objective-C', r: 0.12},
+                {t: 'CoffeeScript', r: 0.15},
+                {t: 'NodeJs', r: 0.4, u: 'http://www.node.org'},
+                {t: 'jQuery', r: 0.5},
+                {t: 'YUI', r: 0.6}
+            ],{
+                speed: 20
+            });
+        });
+    </script>
+	<script>
+		KISSY.use('node', function(S, Node){
+			var $ = Node.one;
+			$('#source').html('<pre>' + $('#code').text() + '</pre>');
+		});
+	</script>
+</body>
+</html>

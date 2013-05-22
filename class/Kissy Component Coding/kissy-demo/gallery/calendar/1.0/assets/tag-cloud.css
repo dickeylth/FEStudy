@@ -1,0 +1,35 @@
+.tag-cloud-item{
+    padding: 4px;
+    position: absolute;
+}
+
+.tagCloud
+{
+    background: transparent url("bg_blue.gif") 0 0 repeat;
+}
+.tagCloud ul, .tagCloud li
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.tagCloud .tagClass img
+{
+    border: 0 none;
+}
+.tagCloud .tagClass a
+{
+    color: #fff;
+    font-family: Sans;
+    font-weight: normal;
+    padding: 3px;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+}
+.tagCloud .tagClass a:hover
+{
+    border: solid 1px #ffdb00;
+    color: #ffdb00;
+    text-decoration: none;
+}

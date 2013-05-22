@@ -1,0 +1,61 @@
+.tag-cloud-item{
+    padding: 4px;
+    position: absolute;
+}
+
+.tagCloud{
+    background: transparent url("bg_blue.gif") 0 0 repeat;
+}
+
+.tagCloud a{
+	color: #fff;
+	font-family: 'Microsoft Yahei', 'Microsoft JhengHei','Helvetica';
+	font-weight: normal;
+	padding: 3px;
+	text-align: center;
+	text-decoration: none;
+	vertical-align: middle;
+}
+.tagCloud a:hover{
+	border: 2px solid #556677;
+}
+
+.tagCloud .level-1{
+	font-size: 12px;
+}
+
+.tagCloud .level-2{
+	font-size: 14px;
+}
+
+.tagCloud .level-3{
+	font-size: 18px;
+}
+
+.tagCloud .level-4{
+	font-size: 22px;
+}
+
+.tagCloud .level-5{
+	font-size: 26px;
+}
+
+.tagCloud .level-6{
+	font-size: 30px;
+}
+
+.tagCloud .level-7{
+	font-size: 34px;
+}
+
+.tagCloud .level-8{
+	font-size: 38px;
+}
+
+.tagCloud .level-9{
+	font-size: 40px;
+}
+
+.tagCloud .level-10{
+	font-size: 30px;
+}

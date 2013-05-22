@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Overwrite Loader Demo</title>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="http://a.tbcdn.cn/s/kissy/1.3.0/seed.js"></script>
+	<link rel="stylesheet" href="http://a.tbcdn.cn/apps/ks/zoo/slide/demo/img/d1.css" />
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		body{
+			font-family: 'Microsoft Yahei', 'Microsoft JhengHei', 'Monaco', 'Helvetica';
+			padding: 0;
+		}
+		h3{
+			padding: 10px;
+		}
+		.tab-pannel{
+			width: 100%;
+			min-height: 800px;
+		}
+		iframe{
+			border: 0;
+			width: 100%;
+			height: 800px;
+		}
+		.tab-content{
+			width: auto;
+		}
+		pre{
+			font-family: 'Monaco', 'Consolas';
+			font-size: 12px;
+		}
+		button{
+			padding: 4px;
+			font-size: 14px;
+		}
+	</style>
+</head>
+<body>
+<h3>覆盖Gallery中的组件</h3>
+<div id="J_tab" class="slide-style">
+	<ul class="tab-nav clearfix">
+		<li class="selected"><a href="gallery/calendar/1.0/index.js" target="source">源码</a></li>
+		<li><a href="gallery/calendar/1.0/demo-local.html" target="local">本地组件</a></li>
+		<li><a href="gallery/calendar/1.0/demo-online.html" target="online">线上组件</a></li>
+		<li><a href="gallery/calendar/1.0/demo-config.html" target="config">后配置</a></li>
+	</ul>
+	<div class="tab-content">
+		<div class="tab-pannel">
+			<iframe src="gallery/calendar/1.0/index.js" id="source" name="source"></iframe>
+		</div>
+		<div class="tab-pannel hidden">
+			<iframe src="" id="local" name="local"></iframe>
+		</div>
+		<div class="tab-pannel hidden">
+			<iframe src="" id="online" name="online"></iframe>
+		</div>
+		<div class="tab-pannel hidden">
+			<iframe src="" id="config" name="config"></iframe>
+		</div>
+	</div>
+	<script>
+		KISSY.use('gallery/slide/1.0/',function(S,Slide){
+			new Slide('#J_tab',{
+				eventType:'mouseenter'
+			});
+		});
+	</script>
+</div>
+</body>
+</html>
